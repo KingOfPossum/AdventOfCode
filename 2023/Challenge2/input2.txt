@@ -1,0 +1,3 @@
+Game 13: 1 red 10 red 6 green  12 blue 4 green
+Game 35: 2 red 5 green 5 blue
+Game 2: 
