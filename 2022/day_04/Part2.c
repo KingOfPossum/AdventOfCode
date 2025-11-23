@@ -21,7 +21,7 @@ void getRangeLimits(char* range,int *begin,int *end) {
 }
 
 int main(int argc, char *argv[]) {
-    FILE *fp = fopen("TestInput.txt","r");
+    FILE *fp = fopen("Input.txt","r");
 
     if (fp == NULL) {
         printf("Error while opening file!");
@@ -43,9 +43,11 @@ int main(int argc, char *argv[]) {
         getRangeLimits(ranges[0],&range1Begin,&range1End);
         getRangeLimits(ranges[1],&range2Begin,&range2End);
 
-        if ((range1Begin - range2Begin <= 0 && range1End - range2End >= 0) || (range2Begin - range1Begin <= 0 && range2End - range1End >= 0)) {
-            numFullyContained++;
-        }
+       if ((range1Begin <= range2Begin && range1End >= range2Begin) || (range1Begin <= range2End && range1End >= range2End) ||
+           (range2Begin <= range1End && range2End >= range1End) || (range2Begin <= range1End && range2End >= range1End) ||
+           (range1Begin - range2Begin <= 0 && range1End - range2End >= 0) || (range2Begin - range1Begin <= 0 && range2End - range1End >= 0)) {
+           numFullyContained++;
+       }
 
         free(ranges);
     }
