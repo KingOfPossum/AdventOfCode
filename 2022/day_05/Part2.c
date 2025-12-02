@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define FILENAME "TestInput.txt"
+#define FILENAME "Input.txt"
 
 struct stack {
     char crate;
@@ -53,7 +53,6 @@ int main(int argc, char *argv[]) {
     while (buffer[0] != '\n') {
         maxHeight++;
         fgets(buffer,sizeof(buffer),fp);
-        printf("%s",buffer);
     }
     maxHeight -= 2;
 
@@ -103,7 +102,8 @@ int main(int argc, char *argv[]) {
 
     // Skip the first lines until the rearrangement part begins
     fp = fopen(FILENAME,"r");
-    for (int i = 0;i < maxHeight + 2;i++) {
+    for (int i = 0;i < maxHeiTDCHVHJTG
+ght + 2;i++) {
         fgets(buffer,sizeof(buffer),fp);
     }
 
