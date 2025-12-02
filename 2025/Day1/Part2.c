@@ -25,24 +25,6 @@ int processInput(char *txt,int *currentPos) {
         }
     }
 
-    /*
-    if (direction == 'L') {
-        if (*currentPos - amount <= 0) {
-            wentOverZero = 1;
-        }
-        *currentPos = (*currentPos - amount) % 100;
-        if (*currentPos < 0) {
-            *currentPos = (100 + *currentPos);
-        }
-    }
-    else if (direction == 'R') {
-        if (*currentPos + amount >= 100) {
-            wentOverZero = 1;
-        }
-        *currentPos = (*currentPos + amount) % 100;
-    }
-    */
-
     return wentOverZero;
 }
 
