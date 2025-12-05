@@ -109,7 +109,7 @@ int main(int argc, char *argv[]) {
     FILE *fp = fopen(file,"r");
     char buffer[1024];
 
-    int sum = 0;
+    long long sum = 0;
     int rangeLines = 0;
 
     do {
@@ -173,5 +173,5 @@ int main(int argc, char *argv[]) {
     printList(ranges);
     printf("Length : %d\n",size(ranges));
     printf("Lines for ranges : %d",rangeLines);
-    printf("\nSUM : %d",sum);
+    printf("\nSUM : %lld",sum);
 }
